@@ -28,10 +28,15 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * Counter 1 is a function that takes a variable "count" and adds 1 to it. Counter 2 is a function that calls the original function outside of it's scope and returns a value of count + 1
+ * 
  * 2. Which of the two uses a closure? How can you tell?
+ * 
+ * 
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
+ * Counter1 will be preferable you simply want to add 1 to the variable. Counter2 would be preferable to add a running counter to the variable. The data from counter1 will be stored in Counter2 and will not reset each time.
 */
 
 // counter1 code
@@ -59,11 +64,14 @@ Write a function called `inning` that generates a random number of points that a
 
 //do not overthink this function, rewatch lecture video for clarification if needed//
 
-function inning(/*Code Here*/){
+function inning(){
 
-    /*Code Here*/
+    return Math.floor(Math.random() * 2 + 1);
 
 }
+
+inning();
+console.log(inning());
 
 /* Task 3: finalScore()
 
@@ -79,11 +87,23 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(placeholder, howManyInnings){
 
-  /*Code Here*/
+  home = (placeholder() * howManyInnings);
+  away = (placeholder() * howManyInnings);
+
+  const teams = 
+  {
+    "Diamondbacks": home,
+    "Dodgers": away,
+
+  }
+
+  console.log(teams);
 
 }
+
+console.log(finalScore(inning, 9));
 
 /* Task 4: 
 
@@ -107,8 +127,8 @@ and returns the score at each pont in the game, like so:
 
 Final Score: awayTeam - homeTeam */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(placeholder, numbOfInnings) {
+  
 }
 
 
