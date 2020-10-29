@@ -129,6 +129,40 @@ Final Score: awayTeam - homeTeam */
 
 function scoreboard(placeholder, numbOfInnings) {
   
+  for (let i = 1; i <= numbOfInnings; i++) {
+
+    if (i === 1){
+      console.log(`${i}st inning: ${placeholder()} - ${inning()}`)
+
+    }else if (i === 2){
+      console.log(`${i}nd inning: ${placeholder()} - ${inning()}`)
+
+    }else if (i === 3){
+      console.log(`${i}rd inning: ${placeholder()} - ${inning()}`)
+
+    }else if (i === 4){
+      console.log(`${i}th inning: ${placeholder()} - ${inning()}`)
+      
+    }else if (i === 5){
+      console.log(`${i}th inning: ${placeholder()} - ${inning()}`)
+    
+    }else if (i === 6){
+        console.log(`${i}th inning: ${placeholder()} - ${inning()}`) 
+        
+    }else if (i === 7){
+        console.log(`${i}th inning: ${placeholder()} - ${inning()}`)
+        
+    }else if (i === 8){
+        console.log(`${i}th inning: ${placeholder()} - ${inning()}`) 
+        
+    }else if (i === 9){
+        console.log(`${i}th inning: ${placeholder()} - ${inning()}`) 
+    }
+    
+  }
 }
+
+console.log(scoreboard(inning, 6));
+
 
 
